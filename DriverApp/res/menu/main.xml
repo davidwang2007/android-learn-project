@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.david.test.driver.MainActivity"
+    xmlns:hmkcode="http://schemas.android.com/apk/res-auto" >
+
+     <!-- Search Widget -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_search"
+        android:title="Search"
+        hmkcode:actionProviderClass="android.support.v7.widget.ShareActionProvider"
+        hmkcode:actionViewClass="android.support.v7.widget.SearchView"
+        hmkcode:showAsAction="always"/>
+
+</menu>
