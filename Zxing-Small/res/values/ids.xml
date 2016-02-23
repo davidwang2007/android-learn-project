@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="scan_equipment_menu" type="id"/>
+    <item name="username" type="id"/>
+    <item name="password" type="id"/>
+    <item name="menuPanel" type="id"/>
+    <item name="layoutTopBar" type="id"/>
+    <item name="topBarTitle" type="id"/>
+    <item name="submitBtn" type="id"/>
+    <item name="optionsMenuLogoff" type="id"/>
+    <item name="description" type="id"/>
+    <item name="context_menu_submit" type="id"/>
+    <item name="context_menu_update" type="id"/>
+    <item name="context_menu_delete" type="id"/>
+    <item name="datePicker" type="id"/>
+    <item name="timePicker" type="id"/>
+    <item name="emptyView" type="id"/>
+    <item name="address" type="id"/>
+    <item name="remark_name" type="id"/>
+    <item name="timestamp" type="id"/>
+    <item name="belong_address" type="id"/>
+    <item name="decode" type="id"/>
+    <item name="decode_failed" type="id"/>
+    <item name="decode_succeeded" type="id"/>
+    <item name="launch_product_query" type="id"/>
+    <item name="quit" type="id"/>
+    <item name="restart_preview" type="id"/>
+    <item name="return_scan_result" type="id"/>
+    <item name="temperature" type="id"/>
+
+</resources>
