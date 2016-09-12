@@ -22,7 +22,6 @@ import com.woxthebox.draglistview.DragItem;
 import com.woxthebox.draglistview.DragListView;
 import com.woxthebox.draglistview.R;
 
-import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
@@ -41,7 +40,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-@TargetApi(23)
 public class ListFragment extends Fragment {
 
     private ArrayList<Pair<Long, String>> mItemArray;
@@ -86,7 +84,7 @@ public class ListFragment extends Fragment {
         }
 
         mRefreshLayout.setScrollingView(mDragListView.getRecyclerView());
-        mRefreshLayout.setColorSchemeColors(ContextCompat.getColor(getContext(), R.color.app_color));
+        mRefreshLayout.setColorSchemeColors(ContextCompat.getColor(getActivity(), R.color.app_color));
         mRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -146,15 +144,15 @@ public class ListFragment extends Fragment {
     }
 
     private void setupListRecyclerView() {
-        mDragListView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mDragListView.setLayoutManager(new LinearLayoutManager(getActivity()));
         ItemAdapter listAdapter = new ItemAdapter(mItemArray, R.layout.list_item, R.id.image, false);
         mDragListView.setAdapter(listAdapter, true);
         mDragListView.setCanDragHorizontally(false);
-        mDragListView.setCustomDragItem(new MyDragItem(getContext(), R.layout.list_item));
+        mDragListView.setCustomDragItem(new MyDragItem(getActivity(), R.layout.list_item));
     }
 
     private void setupGridVerticalRecyclerView() {
-        mDragListView.setLayoutManager(new GridLayoutManager(getContext(), 4));
+        mDragListView.setLayoutManager(new GridLayoutManager(getActivity(), 4));
         ItemAdapter listAdapter = new ItemAdapter(mItemArray, R.layout.grid_item, R.id.item_layout, true);
         mDragListView.setAdapter(listAdapter, true);
         mDragListView.setCanDragHorizontally(true);
@@ -163,7 +161,7 @@ public class ListFragment extends Fragment {
     }
 
     private void setupGridHorizontalRecyclerView() {
-        mDragListView.setLayoutManager(new GridLayoutManager(getContext(), 4, LinearLayoutManager.HORIZONTAL, false));
+        mDragListView.setLayoutManager(new GridLayoutManager(getActivity(), 4, LinearLayoutManager.HORIZONTAL, false));
         ItemAdapter listAdapter = new ItemAdapter(mItemArray, R.layout.grid_item, R.id.item_layout, true);
         mDragListView.setAdapter(listAdapter, true);
         mDragListView.setCanDragHorizontally(true);
